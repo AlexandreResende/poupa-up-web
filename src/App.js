@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
 import Header from './components/header/header';
+import SideBar from './components/sideBar/side-bar';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header></Header>
+          <SideBar></SideBar>
         </div>
       </BrowserRouter>
     );
