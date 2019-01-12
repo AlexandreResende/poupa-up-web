@@ -10,6 +10,8 @@ const Header = styled.div`
   height: 5rem;
   position: fixed;
   top: 0;
+  border-bottom: 2px solid black;
+  z-index: 1;
 `;
 
 export default Header;
