@@ -11,7 +11,7 @@ const SideBar = (props) => (
   <SideBarSC>
     <ul>
       <Link to={'/incomes'} style={{textDecoration: 'none'}}>
-        <li><SideBarHeader title={'Incomes'} marginTop={'9rem'} /></li>
+        <li><SideBarHeader title={'Incomes'} marginTop={'7rem'} /></li>
       </Link>
       <Link to={'/expenses'} style={{textDecoration: 'none'}}>
         <li><SideBarHeader title={'Expenses'} /></li>

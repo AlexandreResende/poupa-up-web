@@ -6,14 +6,16 @@ import './App.css';
 
 import Header from './components/header/header';
 import SideBar from './components/sideBar/side-bar';
+import ContentSection from './components/contentSection/content-section';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Header></Header>
+          <Header title={'Poupa-up'}></Header>
           <SideBar></SideBar>
+          <ContentSection></ContentSection>
         </div>
       </BrowserRouter>
     );

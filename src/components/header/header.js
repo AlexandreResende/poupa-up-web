@@ -6,12 +6,10 @@ import HeaderSC from './header.sc';
 
 const Header = (props) => (
     <div>
-      <Link to={'/'} exact>
-        <HeaderSC>
-          Poupa-up
-        </HeaderSC>
+      <Link to={'/'} exact={true} >
+        <HeaderSC>Poupa-up</HeaderSC>
       </Link>
-      <Route path='/' exact />
+      <Route path='/' exact={true} />
     </div>
 );
 
