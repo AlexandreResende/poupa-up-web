@@ -18,8 +18,8 @@ class ContentSection extends PureComponent {
         <p>
           This is an application that will help you have control of your money.
         </p>
-        <ContentCard title={'Incomes'} marginLeft={'15rem'} marginRight={'10rem'}></ContentCard>
-        <ContentCard title={'Expenses'} marginLeft={'60rem'} marginRight={'5rem'}></ContentCard>
+        <ContentCard title={'Incomes'} marginLeft={'10vw'}></ContentCard>
+        <ContentCard title={'Expenses'} marginLeft={'50vw'} marginRight={'10vw'}></ContentCard>
       </ContentSectionSC>
     );
   }
