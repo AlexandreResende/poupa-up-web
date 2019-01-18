@@ -6,7 +6,10 @@ import ContentCardSC from './content-card.sc';
 class ContentCard extends Component {
   constructor(props) {
     super(props)
-    this.state = {};
+    this.state = {
+      incomes: [],
+      expenses: [],
+    };
   }
 
   componentDidMount() {
@@ -18,7 +21,13 @@ class ContentCard extends Component {
         return response.json();
       })
       .then(data => {
-        console.log(data);
+        this.setState(prevState => {
+          return {
+            ...prevState,
+            incomes: data.incomes || [],
+            expenses: data.expenses || [],
+          }
+        });
       })
       .catch(err => {
         console.log(err);
@@ -30,11 +39,19 @@ class ContentCard extends Component {
   }
 
   render() {
+    const titleLowered = this.props.title.toLowerCase();
+    console.log('>>>>>>>>>');
+    console.log(this.state);
     return (
       <ContentCardSC
         marginRight={this.props.marginRight}
         marginLeft={this.props.marginLeft}
-      >{this.props.title}</ContentCardSC>
+      >
+        <p>{this.props.title}</p>
+        {this.state[titleLowered].map(objValue => {
+          return (<span>Value: {objValue.value} | description: {objValue.description}</span>);
+        })}
+      </ContentCardSC>
     );
   }
 }
