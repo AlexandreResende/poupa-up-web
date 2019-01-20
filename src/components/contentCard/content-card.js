@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import ContentCardSC from './content-card.sc';
 
+import './content-card.css';
+
 class ContentCard extends Component {
   constructor(props) {
     super(props)
@@ -40,17 +42,24 @@ class ContentCard extends Component {
 
   render() {
     const titleLowered = this.props.title.toLowerCase();
-    console.log('>>>>>>>>>');
-    console.log(this.state);
+
     return (
       <ContentCardSC
         marginRight={this.props.marginRight}
         marginLeft={this.props.marginLeft}
       >
-        <p>{this.props.title}</p>
-        {this.state[titleLowered].map(objValue => {
-          return (<span>Value: {objValue.value} | description: {objValue.description}</span>);
-        })}
+        <table>
+          <thead><tr><th colSpan='2'>{this.props.title}</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Value</td>
+              <td>Description</td>
+            </tr>
+            {this.state[titleLowered].map(objValue => {
+            return (<tr><td>{objValue.value}</td><td>{objValue.description}</td></tr>);
+            })}
+          </tbody>
+        </table>
       </ContentCardSC>
     );
   }
