@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div class='relativePositioning'>
+        <div className='relativePositioning'>
           <Header title={'Poupa-up'}></Header>
           <SideBar></SideBar>
           <ContentSection></ContentSection>

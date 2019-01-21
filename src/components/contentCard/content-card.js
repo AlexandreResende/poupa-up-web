@@ -23,6 +23,7 @@ class ContentCard extends Component {
         return response.json();
       })
       .then(data => {
+        console.log(data);
         this.setState(prevState => {
           return {
             ...prevState,
@@ -37,7 +38,7 @@ class ContentCard extends Component {
   }
 
   getEndoint(title) {
-    return `http://localhost:3000/${title}/get-all-${title}`;
+    return `http://localhost:7777/${title}/get-all-${title}`;
   }
 
   render() {
@@ -56,7 +57,7 @@ class ContentCard extends Component {
               <td>Description</td>
             </tr>
             {this.state[titleLowered].map(objValue => {
-            return (<tr><td>{objValue.value}</td><td>{objValue.description}</td></tr>);
+            return (<tr key={objValue.id}><td>{objValue.value}</td><td>{objValue.description}</td></tr>);
             })}
           </tbody>
         </table>
