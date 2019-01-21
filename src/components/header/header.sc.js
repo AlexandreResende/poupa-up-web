@@ -12,6 +12,7 @@ const Header = styled.div`
 
   font-size: 3rem;
   text-align: center;
+  line-height: 5rem;
   
   z-index: 1;
 `;
