@@ -5,7 +5,7 @@ const ContentCard = styled.div`
   position: absolute;
 
   width: 20vw;
-  height:40vh;
+  height: 35vh;
   
   text-align: center;
 
