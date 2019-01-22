@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom';
 
 import SideBarSC from './side-bar.sc';
 import SideBarHeader from '../sideBarHeader/side-bar-header';
+import ContentSection from '../contentSection/content-section';
 
 import './side-bar.css';
 
@@ -31,6 +32,7 @@ const SideBar = (props) => (
     <Route to={'/search'} exact />
     <Route to={'/graphs'} exact />
     <Route to={'/import'} exact />
+    <Route to={'/'} exact component={ContentSection}/>
   </SideBarSC>
 );
 
