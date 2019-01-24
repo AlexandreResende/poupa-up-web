@@ -5,6 +5,7 @@ import { Link, Route } from 'react-router-dom';
 import SideBarSC from './side-bar.sc';
 import SideBarHeader from '../sideBarHeader/side-bar-header';
 import ContentSection from '../contentSection/content-section';
+import ListData from '../listdata/list-data';
 
 import './side-bar.css';
 
@@ -27,7 +28,7 @@ const SideBar = (props) => (
         <li><SideBarHeader title={'Import'} /></li>
       </Link>
     </ul>
-    <Route to={'/incomes'} exact />
+    <Route to={'/incomes'} title={'Incomes'} exact component={ListData} />
     <Route to={'/expenses'} exact />
     <Route to={'/search'} exact />
     <Route to={'/graphs'} exact />
