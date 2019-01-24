@@ -3,6 +3,9 @@
 
 ## The backend of this app is in this [repo](https://github.com/AlexandreResende/poupa-up)
 
+For a better testing of the frontend, you could run the backend and populate its database.
+Try to insert some incomes and expenses to see the result in the different routes
+in this react-app
 
 ## Available Scripts
 
