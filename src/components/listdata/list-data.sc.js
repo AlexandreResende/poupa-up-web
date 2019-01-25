@@ -9,7 +9,7 @@ const ListData = styled.div`
 
   background-color: yellow;
 
-  margin-top: 10vh;
+  margin-top: -40.2vh;
   margin-left: 20vw;
 `;
 
