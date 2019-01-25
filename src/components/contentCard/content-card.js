@@ -78,18 +78,6 @@ class ContentCard extends Component {
           sortable={false}
           noDataText=''
         />
-        {/* <table>
-          <thead><tr><th colSpan='2'>{this.props.title}</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Value</td>
-              <td>Description</td>
-            </tr>
-            {this.state[titleLowered].map(objValue => {
-            return (<tr key={objValue.id}><td>R$ {objValue.value}</td><td>{objValue.description}</td></tr>);
-            })}
-          </tbody>
-        </table> */}
       </ContentCardSC>
     );
   }

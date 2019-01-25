@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link, NavLink, Route } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 
 import SideBarSC from './side-bar.sc';
 import SideBarHeader from '../sideBarHeader/side-bar-header';
@@ -38,8 +38,8 @@ const SideBar = (props) => (
         </NavLink>
       </li>
     </ul>
-    <Route path='/incomes' title={'Incomes'} component={ListData} />
-    <Route path='/expenses' exact />
+    <Route path='/incomes'  component={ListData} />
+    <Route path='/expenses' component={ListData} />
     <Route path='/search' exact />
     <Route path='/graphs' exact />
     <Route path='/import' exact />
