@@ -72,10 +72,10 @@ export default class ListData extends Component {
 					className='-striped'
 					data={data}
 					columns={columns}
-					showPagination={false}
-					showPaginationBottom={false}
+					showPagination={true}
+					showPaginationBottom={true}
 					showPageSizeOptions={false}
-					defaultPageSize={8} 
+					defaultPageSize={20} 
 					sortable={false}
 					noDataText=''
 				/>
