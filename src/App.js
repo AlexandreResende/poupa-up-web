@@ -15,7 +15,7 @@ class App extends Component {
         <div className='relativePositioning'>
           <Header title={'Poupa-up'}></Header>
           <SideBar></SideBar>
-          <ContentSection></ContentSection>
+          {/* <ContentSection></ContentSection> */}
         </div>
       </BrowserRouter>
     );
