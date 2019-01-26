@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 
 import ListDataSC from './list-data.sc';
+import fetchData from '../../utils/fetchData';
 
 import './list-data.css';
 import "react-table/react-table.css";
@@ -16,9 +17,19 @@ export default class ListData extends Component {
 		};
 	}
 
-	componentDidMount() {
-		const titleLowered = this.props.location.pathname.substring(1);
-    const endpoint = this.getEndoint(titleLowered);
+	async componentDidMount() {
+		const title = this.props.location.pathname.substring(1);
+		const fetchedData = await fetchData(title);
+		console.log('fetchedData', fetchedData);
+
+		this.setState(prevState => {
+			return {
+				...prevState,
+				incomes: fetchedData.incomes || [],
+				expenses: fetchedData.expenses || [],
+			}
+		});
+    /* const endpoint = this.getEndoint(titleLowered);
 
     fetch(endpoint, { method: 'GET' })
       .then(response => {
@@ -36,7 +47,7 @@ export default class ListData extends Component {
       })
       .catch(err => {
         console.log(err);
-      });
+      }); */
 	}
 
 	getEndoint(title) {

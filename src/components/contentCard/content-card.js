@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 
 import ContentCardSC from './content-card.sc';
+import fetchData from '../../utils/fetchData';
 
 // import './content-card.css';
 import "react-table/react-table.css";
@@ -16,31 +17,17 @@ class ContentCard extends Component {
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const titleLowered = this.props.title.toLowerCase();
-    const endpoint = this.getEndoint(titleLowered);
+    const fetchedData = await fetchData(titleLowered);
 
-    fetch(endpoint, { method: 'GET' })
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        console.log(data);
-        this.setState(prevState => {
-          return {
-            ...prevState,
-            incomes: data.incomes || [],
-            expenses: data.expenses || [],
-          }
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
-
-  getEndoint(title) {
-    return `http://localhost:7777/${title}/get-all-${title}`;
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        incomes: fetchedData.incomes || [],
+        expenses: fetchedData.expenses || [],
+      }
+    });
   }
 
   render() {
