@@ -13,6 +13,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
+**Before you run the frontend make sure that you 
+have the Typescript poupa-up backend running on your machine**
+
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
